@@ -8,10 +8,10 @@ int main() {
 	Stack* stack = initialize_stack();
 	UserMenu(stack);
 
-	push(stack, create_student("Piotr", 2004, CS));
-	push(stack, create_student("Andrzej", 2002, MT));
-	push(stack, create_student("Krzysztof", 1999, BG));
-	push(stack, create_student("Mateusz", 2003, CS));
+	//push(stack, create_student("Piotr", 2004, CS));
+	//push(stack, create_student("Andrzej", 2002, MT));
+	//push(stack, create_student("Krzysztof", 1999, BG));
+	//push(stack, create_student("Mateusz", 2003, CS));
 
 	MyStudent* result;
 	
