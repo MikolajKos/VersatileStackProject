@@ -1,0 +1,4 @@
+﻿  Main.c
+C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\VersatileStackProj\VersatileStackProj\stack.h(21,2): warning C4033: 'initialize_stack' must return a value
+C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\VersatileStackProj\VersatileStackProj\stack.h(22,1): warning C4716: 'initialize_stack': must return a value
+  VersatileStackProj.vcxproj -> C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\VersatileStackProj\x64\Debug\VersatileStackProj.exe
