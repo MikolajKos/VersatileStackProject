@@ -1,6 +1,2 @@
 ﻿  Main.c
-  stack.c
-  Generating Code...
-C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\stack.c(10,2): warning C4033: 'initialize_stack' must return a value
-C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\stack.c(11,1): warning C4716: 'initialize_stack': must return a value
   VersatileStackProj.vcxproj -> C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\x64\Debug\VersatileStackProj.exe

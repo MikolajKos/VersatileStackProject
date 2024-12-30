@@ -2,9 +2,11 @@
 #include "cli_mess.h"
 #include "stack.h"
 #include "MY_STUDENT.h"
+#include "user_interface.h"
 
 int main() {
 	Stack* stack = initialize_stack();
+	UserMenu(stack);
 
 	push(stack, create_student("Piotr", 2004, CS));
 	push(stack, create_student("Andrzej", 2002, MT));

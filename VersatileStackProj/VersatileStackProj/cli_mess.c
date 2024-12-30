@@ -11,8 +11,7 @@ static char* text_messages[] = {
 void throw_cli_mess(enum CLIENT_MESSAGES mess) {
 	puts(text_messages[mess] + 2);
 
-	if (text_messages[mess][0] == 'E')
-	{
+	if (text_messages[mess][0] == 'E') {
 		system("pause");
 	}
 	return;

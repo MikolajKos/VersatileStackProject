@@ -27,6 +27,12 @@
     <ClCompile Include="stack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="user_interface.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MY_STUDENT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -42,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MY_STUDENT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
