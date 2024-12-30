@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="cli_mess.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="stack.c" />
     <ClCompile Include="stdafx.c" />
   </ItemGroup>
   <ItemGroup>
