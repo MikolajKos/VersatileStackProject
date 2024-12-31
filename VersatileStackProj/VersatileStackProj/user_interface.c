@@ -2,12 +2,13 @@
 #include "user_interface.h"
 #include "MY_STUDENT.h"
 
-void UserMenu(Stack* stack){
+void UserMenu(){
+	Stack* stack = initialize_stack();
 	int option;
 
 	do {
 		printf_s("Wybierz dzialanie:\n");
-		printf_s("  1 - zwolnij pamiec stosu\n  2 - dodaj nowy element\n  3 - pobierz pierwszy element\n  4 - znajdz element\n  5 - zapisz na dysku\n  6 - odczytaj z dysku\n  0 - Wyjdz\n\n");
+		printf_s("  1 - zwolnij pamiec stosu\n  2 - dodaj nowy element\n  3 - pobierz pierwszy element\n  4 - znajdz element\n  5 - wypisz wszystkie elementy stosu\n  6 - zapisz na dysku\n  7 - odczytaj z dysku\n  0 - Wyjdz\n\n");
 		scanf_s("%d", &option);
 
 		switch (option) {
@@ -17,16 +18,21 @@ void UserMenu(Stack* stack){
 			case 2:
 				interf_push(stack);
 				break;
+			//case 3:
+			//	interf_pop()
+			//	break;
+			case 5:
+				interf_read_stack(stack);
+				break;
 			default:
 				break;
 		}
 	} while (option != 0);
 
+
 }
 
-Stack* interf_initialize_stack() { 
-	initialize_stack(); 
-}
+
 
 void interf_free_stack(Stack* stack) { 
 	free_stack(stack); 
@@ -68,6 +74,20 @@ void interf_push(Stack* stack) {
 	} while (option != 0);
 }
 
-void* interf_pop(Stack* stack) {
-	pop(stack);
-}
+//void* interf_pop(Stack* stack) {
+//	pop(stack);
+//}
+
+//void interf_read_stack(Stack* stack) {
+//	MyStudent* result;
+//
+//	while ((result = (void*)pop(stack)) != NULL)
+//	{
+//		printf_s("Surname: %s, Birth Year: %d, Field: %s \n",
+//			result->surname,
+//			result->birth_year,
+//			sfields_text[result->sfield]);
+//
+//		printf_s("\n");
+//	}
+//}

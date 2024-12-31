@@ -4,7 +4,7 @@
 #pragma once
 
 void UserMenu();
-Stack* interf_initialize_stack();
 void interf_free_stack(Stack* stack);
 void interf_push(Stack* stack);
 void* interf_pop(Stack* stack);
+void interf_read_stack(Stack* stack);
