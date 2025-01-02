@@ -1,5 +1,8 @@
 #include "stdafx.h"
 #include "MY_STUDENT.h"
+#include "cli_mess.h"
+#include "stack.h"
+
 
 const char* sfields_text[] = { "Mathematics", "Biology", "Computer Science" };
 
@@ -28,3 +31,27 @@ void free_student(MyStudent* student)
 	free(student->surname);
 	free(student);
 }
+
+void save_student_to_file(void** pdat, const char* filename) {
+    if (!pdat || !filename) {
+        throw_cli_mess(CLI_MESS_INVALID_ARGUMENT);
+        return;
+    }
+
+    FILE* file = fopen(filename, "wb");
+    if (!file) {
+        throw_cli_mess(CLI_MESS_FILE_ERROR);
+        return;
+    }
+
+    MyStudent* student = (MyStudent*)*pdat;
+    if (fwrite(student, sizeof(MyStudent), 1, file) != 1) {
+        throw_cli_mess(CLI_MESS_FILE_WRITE_ERROR);
+        fclose(file);
+        return;
+    }
+
+    fclose(file);
+}
+
+void load_student_from_file(void** ptr, const char* filename);

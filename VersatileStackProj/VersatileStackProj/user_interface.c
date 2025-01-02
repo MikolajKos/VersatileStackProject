@@ -138,7 +138,11 @@ void interf_peek_all(Stack* stack, int option) {
 void interf_save_to_file(Stack* stack, const char* filename, int option) {
 	switch (option){
 		case 1: {
-			save_stack_to_file(stack, filename, sizeof(MyStudent));
+			save_student_to_file(stack->top, filename);
+			break;
+		}
+		case 2: {
+			throw_cli_mess(CLI_MESS_WRONG_TYPE);
 			break;
 		}
 		default:
@@ -161,6 +165,10 @@ void interf_load_from_file(Stack* stack, const char* filename, int option) {
 				free(result);
 			}
 
+			break;
+		}
+		case 2: {
+			throw_cli_mess(CLI_MESS_WRONG_TYPE);
 			break;
 		}
 		default:

@@ -20,5 +20,7 @@ typedef struct {
 
 MyStudent* create_student(const char* surname, int birth_year, StudyField sfield);
 void free_student(MyStudent* student);
+void save_student_to_file(void** pdat, const char* filename);
+void load_student_from_file(void** pdat, const char* filename);
 
 
