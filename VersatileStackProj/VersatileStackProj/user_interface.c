@@ -2,10 +2,12 @@
 #include "user_interface.h"
 #include "MY_STUDENT.h"
 #include "cli_mess.h"
+#include "data.h"
 
 void UserMenu(){
-	Stack* stack = initialize_stack();
 	int option, type_option;
+
+	Stack* stack = initialize_stack();
 
 	do{
 		printf_s("Wybierz rodzaj danych:\n");
@@ -20,7 +22,7 @@ void UserMenu(){
 
 	do {
 		printf_s("Wybierz dzialanie:\n");
-		printf_s("  1 - zwolnij pamiec stosu\n  2 - dodaj nowy element\n  3 - pobierz pierwszy element\n  4 - znajdz element\n  5 - wypisz wszystkie elementy stosu\n  6 - zapisz na dysku\n  7 - odczytaj z dysku\n  0 - Wyjdz\n\n");
+		printf_s("  1 - zwolnij pamiec stosu\n  2 - dodaj nowy element\n  3 - pobierz pierwszy element\n  4 - znajdz element\n  5 - wypisz wszystkie elementy stosu\n  6 - zapisz na dysku\n  7 - odczytaj z dysku\n  8 - Zainicjalizuj stos\n  0 - Wyjdz\n\n");
 		scanf_s("%d", &option);
 
 		switch (option) {
@@ -35,6 +37,15 @@ void UserMenu(){
 				break;
 			case 5:
 				interf_peek_all(stack, type_option);
+				break;
+			case 6:
+				interf_save_to_file(stack, "stackdata.bin", type_option);
+				break;
+			case 7:
+				interf_load_from_file(stack, "stackdata.bin", type_option);
+				break;
+			case 8:
+				stack = initialize_stack();
 				break;
 			default:
 				break;
@@ -122,4 +133,41 @@ void interf_peek_all(Stack* stack, int option) {
 	default:
 		break;
 	}
+}
+
+void interf_save_to_file(Stack* stack, const char* filename, int option) {
+	switch (option){
+		case 1: {
+			save_stack_to_file(stack, filename, sizeof(MyStudent));
+			break;
+		}
+		default:
+			break;
+	}
+}
+
+void interf_load_from_file(Stack* stack, const char* filename, int option) {
+	switch (option) {
+		case 1: {
+			load_stack_from_file(stack, filename, sizeof(MyStudent));
+
+			while (stack->top) {
+				MyStudent* result = (MyStudent*)pop(stack);
+
+				printf_s("Surname: %s, Birth Year: %d, Field: %s \n",
+					result->surname,
+					result->birth_year,
+					sfields_text[result->sfield]);
+				free(result);
+			}
+
+			break;
+		}
+		default:
+			break;
+	}
+}
+
+Stack* interf_initialize_stack() {
+	
 }

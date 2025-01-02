@@ -11,12 +11,19 @@ Stack* initialize_stack() {
 }
 
 void free_stack(Stack* stack) {
+	if (stack == NULL) {
+		throw_cli_mess(CLI_MESS_UNINITIALIZED_STACK);
+		return NULL;
+	}
+
 	StackItem* item = stack->top;
 	while (item) {
 		stack->top = item->next;
+		free(item->data);
 		free(item);
 		item = stack->top;
 	}
+	free(stack);
 }
 
 void push(Stack* stack, void* data) {
@@ -36,11 +43,16 @@ void* pop(Stack* stack) {
 	StackItem* item = stack->top;
 	void* data = item->data;
 	stack->top = item->next;
+	free(item);
 	return data;
 }
 
 void** peek_all(Stack* stack, int* count) {
 	*count = 0;
+
+	if (!stack) {
+		throw_cli_mess(CLI_MESS_ALLOC_ERROR);
+	}
 
 	// Liczba elementów w stosie
 	StackItem* current = stack->top;

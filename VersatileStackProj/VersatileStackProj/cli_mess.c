@@ -8,7 +8,11 @@ static char* text_messages[] = {
 	"W Stos jest pusty",
 	"E Stos jest pusty",
 	"W Program obecnie nie jest przystosowany do obslugi tego obiektu",
-	"W Wybrano nieistniejaca opcje, wybierz jeszcze raz"
+	"W Wybrano nieistniejaca opcje, wybierz jeszcze raz",
+	"E Podano nieprawidlowe argumenty",
+	"E Nie mozna otworzyc pliku",
+	"E Nie mozna nadpisac pliku",
+	"W Stos jest niezainicjalizowany"
 };
 
 void throw_cli_mess(enum CLIENT_MESSAGES mess) {

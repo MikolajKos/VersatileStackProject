@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cli_mess.c" />
+    <ClCompile Include="data.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="MY_STUDENT.c" />
     <ClCompile Include="stack.c" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cli_mess.h" />
+    <ClInclude Include="data.h" />
     <ClInclude Include="MY_STUDENT.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="stdafx.h" />

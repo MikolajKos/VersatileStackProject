@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\user_interface.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\cli_mess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\user_interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\user_interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\cli_mess.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\stack.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\data.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\data.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +30,47 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "stack.c",
+              "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\stack.c",
+              "RelativeDocumentMoniker": "VersatileStackProj\\stack.c",
+              "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\stack.c",
+              "RelativeToolTip": "VersatileStackProj\\stack.c",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-01-02T12:08:41.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "targetver.h",
+              "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\targetver.h",
+              "RelativeDocumentMoniker": "VersatileStackProj\\targetver.h",
+              "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\targetver.h",
+              "RelativeToolTip": "VersatileStackProj\\targetver.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-02T12:08:14.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "user_interface.h",
+              "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\user_interface.h",
+              "RelativeDocumentMoniker": "VersatileStackProj\\user_interface.h",
+              "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\user_interface.h",
+              "RelativeToolTip": "VersatileStackProj\\user_interface.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-02T11:46:19.54Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,35 +79,22 @@
               "RelativeDocumentMoniker": "VersatileStackProj\\user_interface.c",
               "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\user_interface.c*",
               "RelativeToolTip": "VersatileStackProj\\user_interface.c*",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACYAAAALAAAA",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAAAJYAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-12-31T16:19:29.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "cli_mess.h",
-              "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.h",
-              "RelativeDocumentMoniker": "VersatileStackProj\\cli_mess.h",
-              "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.h",
-              "RelativeToolTip": "VersatileStackProj\\cli_mess.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-31T16:18:20.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "cli_mess.c",
-              "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.c",
-              "RelativeDocumentMoniker": "VersatileStackProj\\cli_mess.c",
-              "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.c",
-              "RelativeToolTip": "VersatileStackProj\\cli_mess.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAxAAAA",
+              "DocumentIndex": 3,
+              "Title": "data.c",
+              "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\data.c",
+              "RelativeDocumentMoniker": "VersatileStackProj\\data.c",
+              "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\data.c",
+              "RelativeToolTip": "VersatileStackProj\\data.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-12-31T16:13:52.523Z",
+              "WhenOpened": "2025-01-02T11:34:53.699Z",
               "EditorCaption": ""
             }
           ]

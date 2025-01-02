@@ -1,4 +1,5 @@
 ﻿  user_interface.c
-C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(59,12): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
-C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(107,15): warning C4133: 'initializing': incompatible types - from 'void **' to 'MyStudent **'
+C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(70,12): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(118,15): warning C4133: 'initializing': incompatible types - from 'void **' to 'MyStudent **'
+C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(173,1): warning C4716: 'interf_initialize_stack': must return a value
   VersatileStackProj.vcxproj -> C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\x64\Debug\VersatileStackProj.exe

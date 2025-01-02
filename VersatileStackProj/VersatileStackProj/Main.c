@@ -6,21 +6,5 @@
 
 int main() {
 	UserMenu();
-
-	//push(stack, create_student("Piotr", 2004, CS));
-	//push(stack, create_student("Andrzej", 2002, MT));
-	//push(stack, create_student("Krzysztof", 1999, BG));
-	//push(stack, create_student("Mateusz", 2003, CS));
-
-	//MyStudent* result;
-	//
-	//while ((result = (MyStudent *)pop(stack)) != NULL)
-	//{
-	//	printf_s("Surname: %s, Birth Year: %d, Field: %s \n",
-	//		result->surname,
-	//		result->birth_year,
-	//		sfields_text[result->sfield]);
-
-	//	printf_s("\n");
-	//}
+	return 0;
 }
