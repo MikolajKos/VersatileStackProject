@@ -134,3 +134,32 @@ void read_student_from_file(Stack* stack, const char* filename) {
 
     fclose(file);
 }
+
+void print_all_students(Stack* stack) {
+    if (!stack) {
+        throw_cli_mess(CLI_MESS_UNINITIALIZED_STACK);
+        return;
+    }
+
+    StackItem* current = stack->top;
+    if (!current) {
+        throw_cli_mess(CLI_MESS_STACK_EMPTY);
+        return;
+    }
+
+    printf("Lista studentow:\n");
+    int index = 1;
+
+    while (current) {
+        MyStudent* student = (MyStudent*)current->data;
+        if (student) {
+            printf("%d. Nazwisko: %s, Rok Urodzenia: %d, Kierunek: %s\n",
+                index,
+                student->surname,
+                student->birth_year,
+                sfields_text[student->sfield]);
+        }
+        current = current->next;
+        index++;
+    }
+}

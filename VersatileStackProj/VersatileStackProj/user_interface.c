@@ -56,7 +56,7 @@ void UserMenu(){
 }
 
 void interf_free_stack(Stack* stack) { 
-	free_stack(stack); 
+	free_stack(stack);
 }
 
 void interf_push(Stack* stack, int option) {
@@ -115,15 +115,7 @@ void interf_peek_all(Stack* stack, int option) {
 
 	switch (option) {
 	case 1: {
-		MyStudent** result = peek_all(stack, &count);
-
-		for (int i = 0; i < count; i++) {
-			printf_s("Surname: %s, Birth Year: %d, Field: %s \n",
-				result[i]->surname,
-				result[i]->birth_year,
-				sfields_text[result[i]->sfield]);
-		}
-
+		print_all_students(stack);
 		break;
 	}
 	case 2: {
@@ -155,22 +147,9 @@ void interf_load_from_file(Stack* stack, const char* filename, int option) {
 		case 1: {
 			Stack* tmp_stack = initialize_stack();
 			read_student_from_file(tmp_stack, filename);
-
-			while (tmp_stack-> top)
-			{
-				MyStudent* result = (MyStudent*)pop(tmp_stack);
-				if (!result)
-					break;
-
-				printf_s("Surname: %s, Birth Year: %d, Field: %s \n",
-					result->surname,
-					result->birth_year,
-					sfields_text[result->sfield]);
-				free(result);
-			}
+			print_all_students(tmp_stack);
 
 			free_stack(tmp_stack);
-
 			break;
 		}
 		case 2: {

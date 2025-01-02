@@ -13,7 +13,7 @@ Stack* initialize_stack() {
 void free_stack(Stack* stack) {
 	if (stack == NULL) {
 		throw_cli_mess(CLI_MESS_UNINITIALIZED_STACK);
-		return NULL;
+		return;
 	}
 
 	StackItem* item = stack->top;
