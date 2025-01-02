@@ -15,7 +15,7 @@ MyStudent* create_student(const char* surname, int birth_year, StudyField sfield
 		free(student);
 	}
 
-	strcpy_s(student->surname, strlen(student->surname), surname);
+	strcpy_s(student->surname, strlen(surname) + 1, surname);
 
 	student->birth_year = birth_year;
 	student->sfield = sfield;

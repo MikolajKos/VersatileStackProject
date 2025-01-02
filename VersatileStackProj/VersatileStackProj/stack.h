@@ -16,3 +16,4 @@ Stack* initialize_stack();
 void free_stack(Stack* stack);
 void push(Stack* stack, void* data);
 void* pop(Stack* stack);
+void** peek_all(Stack* stack, int* count);

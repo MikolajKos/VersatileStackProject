@@ -38,3 +38,36 @@ void* pop(Stack* stack) {
 	stack->top = item->next;
 	return data;
 }
+
+void** peek_all(Stack* stack, int* count) {
+	*count = 0;
+
+	// Liczba elementów w stosie
+	StackItem* current = stack->top;
+	while (current) {
+		(*count)++;
+		current = current->next;
+	}
+
+	// Sprawdzenie czy stos nie jest pusty
+	if (*count == 0) {
+		throw_cli_mess(CLI_MESS_STACK_EMPTY);
+		return NULL;
+	}
+
+	// Alokacja tablicy wskaŸników
+	void** data_array = (void**)malloc((*count) * sizeof(void*));
+	if (!data_array) {
+		throw_cli_mess(CLI_MESS_ALLOC_ERROR);
+		return NULL;
+	}
+
+	// Wype³nianie tablicy danymi
+	current = stack->top;
+	for (int i = 0; i < *count; i++) {
+		data_array[i] = current->data;
+		current = current->next;
+	}
+
+	return data_array;
+}
