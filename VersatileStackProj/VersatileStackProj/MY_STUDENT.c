@@ -38,14 +38,31 @@ void save_student_to_file(void** pdat, const char* filename) {
         return;
     }
 
-    FILE* file = fopen(filename, "wb");
+    FILE* file = fopen(filename, "ab");
     if (!file) {
         throw_cli_mess(CLI_MESS_FILE_ERROR);
         return;
     }
 
     MyStudent* student = (MyStudent*)*pdat;
-    if (fwrite(student, sizeof(MyStudent), 1, file) != 1) {
+
+    //Saving dynamic data size
+    size_t surname_len = strlen(student->surname) + 1;
+    if (fwrite(&surname_len, sizeof(size_t), 1, file) != 1) {
+        throw_cli_mess(CLI_MESS_FILE_WRITE_ERROR);
+        fclose(file);
+        return;
+    }
+
+    //Saving surname
+    if (fwrite(student->surname, sizeof(char), surname_len, file) != surname_len) {
+        throw_cli_mess(CLI_MESS_FILE_WRITE_ERROR);
+        fclose(file);
+        return;
+    }
+
+    if (fwrite(&student->birth_year, sizeof(int), 1, file) != 1 ||
+        fwrite(&student->sfield, sizeof(StudyField), 1, file) != 1) {
         throw_cli_mess(CLI_MESS_FILE_WRITE_ERROR);
         fclose(file);
         return;
@@ -54,4 +71,66 @@ void save_student_to_file(void** pdat, const char* filename) {
     fclose(file);
 }
 
-void load_student_from_file(void** ptr, const char* filename);
+void read_student_from_file(Stack* stack, const char* filename) {
+    if (!stack || !filename) {
+        throw_cli_mess(CLI_MESS_INVALID_ARGUMENT);
+        return;
+    }
+
+    FILE* file = fopen(filename, "rb");
+    if (!file) {
+        throw_cli_mess(CLI_MESS_FILE_ERROR);
+        return;
+    }
+
+    while (1) {
+        // Read surname length
+        size_t surname_len;
+        if (fread(&surname_len, sizeof(size_t), 1, file) != 1) {
+            break; // Koniec pliku
+        }
+
+        // Surname memory allocation
+        char* surname = (char*)malloc(surname_len);
+        if (!surname) {
+            throw_cli_mess(CLI_MESS_ALLOC_ERROR);
+            fclose(file);
+            return;
+        }
+
+        // Read surname
+        if (fread(surname, sizeof(char), surname_len, file) != surname_len) {
+            free(surname);
+            //throw_cli_mess(CLI_MESS_FILE_READ_ERROR);
+            fclose(file);
+            return;
+        }
+
+        int birth_year;
+        StudyField sfield;
+        if (fread(&birth_year, sizeof(int), 1, file) != 1 ||
+            fread(&sfield, sizeof(StudyField), 1, file) != 1) {
+            free(surname);
+            //throw_cli_mess(CLI_MESS_FILE_READ_ERROR);
+            fclose(file);
+            return;
+        }
+
+        MyStudent* student = (MyStudent*)malloc(sizeof(MyStudent));
+        if (!student) {
+            free(surname);
+            throw_cli_mess(CLI_MESS_ALLOC_ERROR);
+            fclose(file);
+            return;
+        }
+
+        student->surname = surname;
+        student->birth_year = birth_year;
+        student->sfield = sfield;
+
+        // Dodajemy studenta na stos
+        push(stack, student);
+    }
+
+    fclose(file);
+}

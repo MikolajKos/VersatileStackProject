@@ -153,10 +153,14 @@ void interf_save_to_file(Stack* stack, const char* filename, int option) {
 void interf_load_from_file(Stack* stack, const char* filename, int option) {
 	switch (option) {
 		case 1: {
-			load_stack_from_file(stack, filename, sizeof(MyStudent));
+			Stack* tmp_stack = initialize_stack();
+			read_student_from_file(tmp_stack, filename);
 
-			while (stack->top) {
-				MyStudent* result = (MyStudent*)pop(stack);
+			while (tmp_stack-> top)
+			{
+				MyStudent* result = (MyStudent*)pop(tmp_stack);
+				if (!result)
+					break;
 
 				printf_s("Surname: %s, Birth Year: %d, Field: %s \n",
 					result->surname,
@@ -164,6 +168,8 @@ void interf_load_from_file(Stack* stack, const char* filename, int option) {
 					sfields_text[result->sfield]);
 				free(result);
 			}
+
+			free_stack(tmp_stack);
 
 			break;
 		}
@@ -177,5 +183,5 @@ void interf_load_from_file(Stack* stack, const char* filename, int option) {
 }
 
 Stack* interf_initialize_stack() {
-	
+	initialize_stack();
 }
