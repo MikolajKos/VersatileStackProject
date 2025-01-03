@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\cli_mess.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\user_interface.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4023BF1E-DDF9-448A-BDF9-419610524849}|VersatileStackProj\\VersatileStackProj.vcxproj|solutionrelative:VersatileStackProj\\user_interface.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -30,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "cli_mess.c",
+              "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.c",
+              "RelativeDocumentMoniker": "VersatileStackProj\\cli_mess.c",
+              "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\cli_mess.c",
+              "RelativeToolTip": "VersatileStackProj\\cli_mess.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-01-02T19:21:56.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "stack.c",
               "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\stack.c",
               "RelativeDocumentMoniker": "VersatileStackProj\\stack.c",
@@ -42,12 +59,11 @@
               "RelativeToolTip": "VersatileStackProj\\stack.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-01-02T17:00:15.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T17:00:15.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MY_STUDENT.h",
               "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\MY_STUDENT.h",
               "RelativeDocumentMoniker": "VersatileStackProj\\MY_STUDENT.h",
@@ -55,12 +71,11 @@
               "RelativeToolTip": "VersatileStackProj\\MY_STUDENT.h",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T15:12:04.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T15:12:04.592Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MY_STUDENT.c",
               "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\MY_STUDENT.c",
               "RelativeDocumentMoniker": "VersatileStackProj\\MY_STUDENT.c",
@@ -68,12 +83,11 @@
               "RelativeToolTip": "VersatileStackProj\\MY_STUDENT.c",
               "ViewState": "AQIAAH8AAAAAAAAAAAArwIkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-01-02T14:59:59.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T14:59:59.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "user_interface.h",
               "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\user_interface.h",
               "RelativeDocumentMoniker": "VersatileStackProj\\user_interface.h",
@@ -81,21 +95,19 @@
               "RelativeToolTip": "VersatileStackProj\\user_interface.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T11:46:19.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T11:46:19.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "user_interface.c",
               "DocumentMoniker": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\user_interface.c",
               "RelativeDocumentMoniker": "VersatileStackProj\\user_interface.c",
               "ToolTip": "C:\\Users\\nikok\\OneDrive\\Dokumenty\\STUDIA\\Projekty\\GitHub\\VersatileStackProject\\VersatileStackProj\\VersatileStackProj\\user_interface.c",
               "RelativeToolTip": "VersatileStackProj\\user_interface.c",
-              "ViewState": "AQIAACQAAAAAAAAAAAAkwDAAAAAKAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAkwDAAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-12-31T16:19:29.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T16:19:29.948Z"
             }
           ]
         }
