@@ -36,7 +36,7 @@ void UserMenu(){
 				interf_pop(stack, type_option);
 				break;
 			case 4:
-				find_and_print_students_by_criteria(stack, "Kowalski", -1, -1, "stackdata.bin");
+				interf_find_by_criteria("stackdata.bin", type_option);
 				break;
 			case 5:
 				interf_peek_all(stack, type_option);
@@ -164,6 +164,39 @@ void interf_load_from_file(Stack* stack, const char* filename, int option) {
 	}
 }
 
+void interf_find_by_criteria(const char* filename, int option) {
+	switch (option) {
+	case 1: {
+		char surname[60];
+		int birth_year = -1;
+		int sfield = -1;
+
+		printf_s("Podaj szukane nazwisko [(x) - pomin]:\n");
+		scanf_s("%s", surname, sizeof(surname));
+
+		//Pominiêcie sprawdzenia nazwiska poprzez przypisanie NULL
+		if (surname[0] == 'x')
+			*surname = NULL;
+
+		printf_s("Podaj szukany rok urodzenia [(-1) - pomin]:\n");
+		scanf_s("%d", &birth_year);
+
+		printf_s("Podaj szukany kierunek [(-1) - pomin]:\n");
+		scanf_s("%d", &sfield);
+
+		find_and_print_students_by_criteria(filename, surname, birth_year, sfield);
+		break;
+	}
+	case 2: {
+		throw_cli_mess(CLI_MESS_WRONG_TYPE);
+		break;
+	}
+	default:
+		break;
+	}
+}
+
 Stack* interf_initialize_stack() {
 	initialize_stack();
+	return;
 }

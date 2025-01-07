@@ -180,51 +180,98 @@ void read_student_from_file(Stack* stack, const char* filename) {
     fclose(file);
 }
 
-void find_and_print_students_by_criteria(Stack* stack, const char* surname, int birth_year, StudyField sfield, const char* filename) {
-    // Jeœli stos jest pusty odczyt danych 
-    if (!stack || !filename) {
+/**
+ * @brief Wyszukuje studentów w pliku binarnym na podstawie podanych kryteriów i wyœwietla ich dane.
+ *
+ * @param filename Nazwa pliku, z którego dane studentów bêd¹ odczytane.
+ * @param surname Nazwisko studenta, które ma byæ u¿yte w wyszukiwaniu. Jeœli NULL lub pusty ci¹g, nie jest brane pod uwagê.
+ * @param birth_year Rok urodzenia studenta, który ma byæ u¿yty w wyszukiwaniu. Jeœli -1, nie jest brany pod uwagê.
+ * @param sfield Kierunek studiów, który ma byæ u¿yty w wyszukiwaniu. Jeœli -1, nie jest brany pod uwagê.
+ *
+ * @details Funkcja otwiera plik binarny, w którym przechowywane s¹ dane studentów, a nastêpnie odczytuje dane studentów
+ *          w pêtli. Dla ka¿dego studenta sprawdzane s¹ podane kryteria (nazwisko, rok urodzenia, kierunek).
+ *          Jeœli student spe³nia wszystkie kryteria, jego dane (nazwisko, rok urodzenia, kierunek) s¹ wyœwietlane.
+ *          W przypadku niepodania niektórych argumentów (np. nazwiska, roku urodzenia, kierunku), kryterium nie jest uwzglêdniane w wyszukiwaniu.
+ *          Funkcja obs³uguje równie¿ b³êdy zwi¹zane z otwieraniem pliku, alokowaniem pamiêci i odczytem danych.
+ *          Na koñcu pamiêæ zajmowan¹ przez nazwisko jest zwalniana.
+ */
+void find_and_print_students_by_criteria(const char* filename, const char* surname, int birth_year, StudyField sfield) {
+    if (!filename) {
         throw_cli_mess(CLI_MESS_INVALID_ARGUMENT);
         return;
     }
 
-    if (stack->top == NULL) {
-        // Odczyt studenta z pliku tylko raz jeœli stos jest pusty
-        read_student_from_file(stack, filename);
+    FILE* file = fopen(filename, "rb");
+    if (!file) {
+        throw_cli_mess(CLI_MESS_FILE_ERROR);
+        return;
     }
 
     printf("Wyniki wyszukiwania:\n");
 
-    StackItem* current = stack->top;
-    while (current) {
-        MyStudent* student = (MyStudent*)current->data;
+    while (1) {
+        // Odczyt d³ugoœci nazwiska
+        size_t surname_len;
+        if (fread(&surname_len, sizeof(size_t), 1, file) != 1) {
+            break; // Koniec pliku
+        }
 
+        // Alokowanie pamiêci dla nazwiska
+        char* student_surname = (char*)malloc(surname_len);
+        if (!student_surname) {
+            throw_cli_mess(CLI_MESS_ALLOC_ERROR);
+            fclose(file);
+            return;
+        }
+
+        // Odczyt nazwiska
+        if (fread(student_surname, sizeof(char), surname_len, file) != surname_len) {
+            free(student_surname);
+            throw_cli_mess(CLI_MESS_FILE_READ_ERROR);
+            fclose(file);
+            return;
+        }
+
+        int student_birth_year;
+        StudyField student_sfield;
+        if (fread(&student_birth_year, sizeof(int), 1, file) != 1 ||
+            fread(&student_sfield, sizeof(StudyField), 1, file) != 1) {
+            free(student_surname);
+            throw_cli_mess(CLI_MESS_FILE_READ_ERROR);
+            fclose(file);
+            return;
+        }
+
+        // Sprawdzenie czy student pasuje do kryteriów
         int match = 1;
 
-        // Sprawdzamy nazwisko, jeœli zosta³o podane
-        if (surname && strlen(surname) > 0 && strcmp(student->surname, surname) != 0) {
+        // Sprawdzenie naziska jeœli zosta³o podane
+        if (surname && strlen(surname) > 0 && strcmp(student_surname, surname) != 0) {
             match = 0;
         }
 
-        // Sprawdzamy rok urodzenia, jeœli zosta³ podany
-        if (birth_year != -1 && student->birth_year != birth_year) {
+        // Sprawdzenie roku urodzenia jeœli zosta³ podany
+        if (birth_year != -1 && student_birth_year != birth_year) {
             match = 0;
         }
 
-        // Sprawdzamy kierunek, jeœli zosta³ podany
-        if (sfield != -1 && student->sfield != sfield) {
+        // Sprawdzenie kierunku jeœli zosta³ podany
+        if (sfield != -1 && student_sfield != sfield) {
             match = 0;
         }
 
-        // Jeœli student pasuje do kryteriów, wyœwietlamy dane
+        // Jeœli student pasuje do kryteriów, wyœwietlenie danych
         if (match) {
             printf("Nazwisko: %s, Rok Urodzenia: %d, Kierunek: %s\n",
-                student->surname, student->birth_year, sfields_text[student->sfield]);
+                student_surname, student_birth_year, sfields_text[student_sfield]);
         }
 
-        current = current->next;
+        // Zwolnienie pamiêci i przejœcie do kolejnego studenta
+        free(student_surname);
     }
-}
 
+    fclose(file);
+}
 
 /**
  * @brief Wyœwietla wszystkich studentów znajduj¹cych siê na stosie.
