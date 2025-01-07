@@ -4,7 +4,16 @@
 #include "stack.h"
 
 
-const char* sfields_text[] = { "Mathematics", "Biology", "Computer Science" };
+const char* sfields_text[] = { "Matematyka", "Prawo", "Filologia Angielska", "Informatyka"};
+
+void print_study_fields() {
+    size_t count = sizeof(sfields_text) / sizeof(*sfields_text);
+
+    printf_s("Kierunki:\n");
+    for (int i = 0; i < count; i++) {
+        printf_s("%d - %s\n", i, sfields_text[i]);
+    }
+}
 
 /**
  * @brief Tworzy nowego studenta.

@@ -6,9 +6,10 @@
 #pragma once
 
 typedef enum {
-	MT,
-	BG,
-	CS
+	MA,
+	PR,
+	FA,
+	IF
 } StudyField;
 
 const char* sfields_text[];
@@ -25,3 +26,4 @@ void save_student_to_file(void** pdat, const char* filename);
 void read_student_from_file(Stack* stack, const char* filename);
 void print_all_students(Stack* stack);
 void find_and_print_students_by_criteria(const char* filename, const char* surname, int birth_year, StudyField sfield);
+void print_study_fields();

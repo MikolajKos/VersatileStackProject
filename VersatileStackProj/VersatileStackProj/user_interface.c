@@ -45,7 +45,7 @@ void UserMenu(){
 				interf_save_to_file(stack, "stackdata.bin", type_option);
 				break;
 			case 7:
-				interf_load_from_file(stack, "stackdata.bin", type_option);
+				interf_load_from_file("stackdata.bin", type_option);
 				break;
 			case 8:
 				stack = initialize_stack();
@@ -63,6 +63,11 @@ void interf_free_stack(Stack* stack) {
 }
 
 void interf_push(Stack* stack, int option) {
+	if (!stack) {
+		throw_cli_mess(CLI_MESS_UNINITIALIZED_STACK);
+		return;
+	}
+	
 	switch (option) {
 		case 1: {
 			char surname[50];
@@ -72,7 +77,9 @@ void interf_push(Stack* stack, int option) {
 			printf_s("Podaj nazwisko:\n");
 			scanf_s("%s", surname, sizeof(surname));
 			printf("Podaj rok urodzenia:\n");
-			scanf_s("%d", &birth_year);																   
+			scanf_s("%d", &birth_year);		
+
+			print_study_fields();
 			printf("Podaj kierunek studiow:\n");													   
 			scanf_s("%d", &field_od_study);															   
 																									   
@@ -89,7 +96,12 @@ void interf_push(Stack* stack, int option) {
 	}																			   
 }																									   
 																									   
-void interf_pop(Stack* stack, int option) {																	   
+void interf_pop(Stack* stack, int option) {		
+	if (!stack) {
+		throw_cli_mess(CLI_MESS_UNINITIALIZED_STACK);
+		return;
+	}
+
 	switch (option){
 		case 1: {
 			MyStudent* result;
@@ -114,6 +126,11 @@ void interf_pop(Stack* stack, int option) {
 }																									   
 
 void interf_peek_all(Stack* stack, int option) {
+	if (!stack) {
+		throw_cli_mess(CLI_MESS_UNINITIALIZED_STACK);
+		return;
+	}
+
 	int count = 0;
 
 	switch (option) {
@@ -131,6 +148,11 @@ void interf_peek_all(Stack* stack, int option) {
 }
 
 void interf_save_to_file(Stack* stack, const char* filename, int option) {
+	if (!stack) {
+		throw_cli_mess(CLI_MESS_UNINITIALIZED_STACK);
+		return;
+	}
+
 	switch (option){
 		case 1: {
 			save_student_to_file(stack->top, filename);
@@ -145,7 +167,8 @@ void interf_save_to_file(Stack* stack, const char* filename, int option) {
 	}
 }
 
-void interf_load_from_file(Stack* stack, const char* filename, int option) {
+void interf_load_from_file(const char* filename, int option) {
+
 	switch (option) {
 		case 1: {
 			Stack* tmp_stack = initialize_stack();
@@ -181,6 +204,7 @@ void interf_find_by_criteria(const char* filename, int option) {
 		printf_s("Podaj szukany rok urodzenia [(-1) - pomin]:\n");
 		scanf_s("%d", &birth_year);
 
+		print_study_fields();
 		printf_s("Podaj szukany kierunek [(-1) - pomin]:\n");
 		scanf_s("%d", &sfield);
 
@@ -198,5 +222,4 @@ void interf_find_by_criteria(const char* filename, int option) {
 
 Stack* interf_initialize_stack() {
 	initialize_stack();
-	return;
 }
