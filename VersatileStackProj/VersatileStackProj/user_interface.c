@@ -27,13 +27,16 @@ void UserMenu(){
 
 		switch (option) {
 			case 1:
-				interf_free_stack(stack);
+				interf_free_stack(&stack);
 				break;
 			case 2:
 				interf_push(stack, type_option);
 				break;
 			case 3:
 				interf_pop(stack, type_option);
+				break;
+			case 4:
+				find_and_print_students_by_criteria(stack, "Kowalski", -1, -1, "stackdata.bin");
 				break;
 			case 5:
 				interf_peek_all(stack, type_option);
@@ -149,7 +152,7 @@ void interf_load_from_file(Stack* stack, const char* filename, int option) {
 			read_student_from_file(tmp_stack, filename);
 			print_all_students(tmp_stack);
 
-			free_stack(tmp_stack);
+			free_stack(&tmp_stack);
 			break;
 		}
 		case 2: {

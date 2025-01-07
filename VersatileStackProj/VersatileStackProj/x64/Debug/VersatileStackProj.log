@@ -1,6 +1,2 @@
-﻿  user_interface.c
-C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(70,12): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
-C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(133,30): warning C4047: 'function': 'void **' differs in levels of indirection from 'StackItem *'
-C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(133,30): warning C4022: 'save_student_to_file': pointer mismatch for actual parameter 1
-C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\VersatileStackProj\user_interface.c(166,1): warning C4716: 'interf_initialize_stack': must return a value
+﻿  MY_STUDENT.c
   VersatileStackProj.vcxproj -> C:\Users\nikok\OneDrive\Dokumenty\STUDIA\Projekty\GitHub\VersatileStackProject\VersatileStackProj\x64\Debug\VersatileStackProj.exe

@@ -12,7 +12,8 @@ static char* text_messages[] = {
 	"E Podano nieprawidlowe argumenty",
 	"E Nie mozna otworzyc pliku",
 	"E Nie mozna nadpisac pliku",
-	"W Stos jest niezainicjalizowany"
+	"W Stos jest niezainicjalizowany",
+	"W Nie uda³o siê odczytaæ zawartoœci pliku"
 };
 
 void throw_cli_mess(enum CLIENT_MESSAGES mess) {
